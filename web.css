@@ -1,0 +1,94 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.nav{
+    background-image: url("back-image.png.png");
+    width: 100%;
+    min-height: 100vh;
+    background-position: center;
+    background-size: cover;
+    overflow: hidden;
+    /* display: flex; */
+}
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 40px;
+    
+}
+.navbar a{
+    color: rgb(93, 92, 92);
+}
+.navbar a:hover{
+    color: purple;
+}
+.logo{
+    width: 140px;
+}
+body a{
+    text-decoration: none;
+}
+.mid a, .right a{
+   margin-left: 20px;
+  
+}
+.second{
+    width: 100%;
+    display: flex;
+    margin-top: 100px;
+    padding: 0 10%;
+}
+ .left-sec p,.left-sec button{
+    margin-top: 30px;
+    
+}
+.left-sec p{
+    color: rgb(88, 87, 87);
+}
+.girl{
+    width: 40%;
+}
+.btn{
+    border: none;
+    color: white;
+    background-image: linear-gradient(45deg,#df4881,#c430d7);
+    padding: 14px 33px;
+    border-radius: 30px;
+    border-top-right-radius: 0;
+    transition: .5s ease;
+
+}
+.btn:hover{
+    border-top-right-radius: 30px;
+}
+.anim{
+    opacity: 0;
+    transform: translateY(30px);
+    animation: moveup .5s linear forwards;
+}
+@keyframes moveup{
+    100%{
+        opacity: 1;
+        transform: translateY(0px);
+
+
+    }
+}
+h1.anim{
+    animation-delay: .3;
+}
+.left-sec p.anim{
+    animation-delay: .7s;
+}
+.left-sec button.anim{
+    animation-delay: 1.2s;
+
+
+}
+.girl.anim{
+    animation-delay: 1.5s;
+
+}
