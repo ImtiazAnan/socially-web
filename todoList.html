@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="todo.css">
+</head>
+
+<body>
+    <div class="container">
+        <h2>To Do list</h2>
+        <div class="con_items">
+            <input type="text" class="search_input">
+            <button onclick="addTask()">Add</button>
+        </div>
+        <ul class="list-container">
+
+        </ul>
+    </div>
+    <script>
+        const searchInput = document.querySelector('.search_input')
+        const listContainer = document.querySelector('.list-container')
+
+        function addTask() {
+            if (searchInput.value === '') {
+                alert('You must write something')
+            }
+            else {
+                let li = document.createElement('li')
+                li.innerHTML = searchInput.value
+                listContainer.appendChild(li)
+                let span=document.createElement('span')
+                span.innerHTML= '\u00d7'
+                li.appendChild(span)
+            }
+            searchInput.value = ''
+        }
+        listContainer.addEventListener('click',function(e){
+            if(e.target.tagName==="SPAN"){
+                e.target.parentElement.remove();
+            }
+        })
+    </script>
+</body>
+
+</html>
